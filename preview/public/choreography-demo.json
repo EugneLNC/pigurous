@@ -1,0 +1,977 @@
+{
+  "duration": 8,
+  "tempo_map": [
+    {
+      "beat": 0.0,
+      "time": 0.0,
+      "bpm": 120.0
+    }
+  ],
+  "entities": [
+    {
+      "id": 0,
+      "kind": "circle",
+      "parent_id": null,
+      "width": 1,
+      "height": 1,
+      "initial": {
+        "x": 0.0,
+        "y": 0.0,
+        "rotation": 0.0,
+        "scale_x": 1.0,
+        "scale_y": 1.0,
+        "alpha": 1.0,
+        "red": 1.0,
+        "green": 1.0,
+        "blue": 1.0
+      },
+      "source": {
+        "presentation_layer": "stroke"
+      }
+    },
+    {
+      "id": 1,
+      "kind": "circle",
+      "parent_id": null,
+      "width": 1,
+      "height": 1,
+      "initial": {
+        "x": 0.0,
+        "y": 0.0,
+        "rotation": 0.0,
+        "scale_x": 1.0,
+        "scale_y": 1.0,
+        "alpha": 1.0,
+        "red": 1.0,
+        "green": 1.0,
+        "blue": 1.0
+      },
+      "source": {
+        "presentation_layer": "orbit"
+      }
+    },
+    {
+      "id": 2,
+      "kind": "circle",
+      "parent_id": null,
+      "width": 1,
+      "height": 1,
+      "initial": {
+        "x": 0.0,
+        "y": 0.0,
+        "rotation": 0.0,
+        "scale_x": 1.0,
+        "scale_y": 1.0,
+        "alpha": 1.0,
+        "red": 1.0,
+        "green": 1.0,
+        "blue": 1.0
+      },
+      "source": {
+        "presentation_layer": "ribbon"
+      }
+    },
+    {
+      "id": 3,
+      "kind": "circle",
+      "parent_id": null,
+      "width": 1,
+      "height": 1,
+      "initial": {
+        "x": 0.0,
+        "y": 0.0,
+        "rotation": 0.0,
+        "scale_x": 1.0,
+        "scale_y": 1.0,
+        "alpha": 1.0,
+        "red": 1.0,
+        "green": 1.0,
+        "blue": 1.0
+      },
+      "source": {
+        "presentation_layer": "tunnel"
+      }
+    },
+    {
+      "id": 4,
+      "kind": "circle",
+      "parent_id": null,
+      "width": 1,
+      "height": 1,
+      "initial": {
+        "x": 0.0,
+        "y": 0.0,
+        "rotation": 0.0,
+        "scale_x": 1.0,
+        "scale_y": 1.0,
+        "alpha": 1.0,
+        "red": 1.0,
+        "green": 1.0,
+        "blue": 1.0
+      },
+      "source": {
+        "presentation_layer": "spark"
+      }
+    },
+    {
+      "id": 5,
+      "kind": "circle",
+      "parent_id": null,
+      "width": 1,
+      "height": 1,
+      "initial": {
+        "x": 0.0,
+        "y": 0.0,
+        "rotation": 0.0,
+        "scale_x": 1.0,
+        "scale_y": 1.0,
+        "alpha": 1.0,
+        "red": 1.0,
+        "green": 1.0,
+        "blue": 1.0
+      },
+      "source": {
+        "presentation_layer": "stars"
+      }
+    },
+    {
+      "id": 6,
+      "kind": "circle",
+      "parent_id": null,
+      "width": 1,
+      "height": 1,
+      "initial": {
+        "x": 0.0,
+        "y": 0.0,
+        "rotation": 0.0,
+        "scale_x": 1.0,
+        "scale_y": 1.0,
+        "alpha": 1.0,
+        "red": 1.0,
+        "green": 1.0,
+        "blue": 1.0
+      },
+      "source": {
+        "presentation_layer": "rose"
+      }
+    },
+    {
+      "id": 7,
+      "kind": "circle",
+      "parent_id": null,
+      "width": 1,
+      "height": 1,
+      "initial": {
+        "x": 0.0,
+        "y": 0.0,
+        "rotation": 0.0,
+        "scale_x": 1.0,
+        "scale_y": 1.0,
+        "alpha": 1.0,
+        "red": 1.0,
+        "green": 1.0,
+        "blue": 1.0
+      },
+      "source": {
+        "presentation_layer": "lissajous"
+      }
+    },
+    {
+      "id": 8,
+      "kind": "circle",
+      "parent_id": null,
+      "width": 1,
+      "height": 1,
+      "initial": {
+        "x": 0.0,
+        "y": 0.0,
+        "rotation": 0.0,
+        "scale_x": 1.0,
+        "scale_y": 1.0,
+        "alpha": 1.0,
+        "red": 1.0,
+        "green": 1.0,
+        "blue": 1.0
+      },
+      "source": {
+        "presentation_layer": "hypotrochoid"
+      }
+    }
+  ],
+  "events": [
+    {
+      "beat": 0.0,
+      "op": "create",
+      "entity": 0,
+      "duration": 0.0,
+      "property": "x",
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "beat": 0.0,
+      "op": "create",
+      "entity": 1,
+      "duration": 0.0,
+      "property": "x",
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "beat": 0.0,
+      "op": "create",
+      "entity": 2,
+      "duration": 0.0,
+      "property": "x",
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "beat": 0.0,
+      "op": "create",
+      "entity": 3,
+      "duration": 0.0,
+      "property": "x",
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "beat": 0.0,
+      "op": "create",
+      "entity": 4,
+      "duration": 0.0,
+      "property": "x",
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "beat": 0.0,
+      "op": "create",
+      "entity": 5,
+      "duration": 0.0,
+      "property": "x",
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "beat": 0.0,
+      "op": "create",
+      "entity": 6,
+      "duration": 0.0,
+      "property": "x",
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "beat": 0.0,
+      "op": "create",
+      "entity": 7,
+      "duration": 0.0,
+      "property": "x",
+      "start": 0.0,
+      "end": 0.0
+    },
+    {
+      "beat": 0.0,
+      "op": "create",
+      "entity": 8,
+      "duration": 0.0,
+      "property": "x",
+      "start": 0.0,
+      "end": 0.0
+    }
+  ],
+  "segments": [],
+  "metadata": {
+    "origin": "authored_action_fixture",
+    "title": "Nine materials / Authored action gallery",
+    "render_profile": "choreography-v3",
+    "presentation": {
+      "profile": "choreography-v3",
+      "version": "choreography-actions-v2",
+      "duration": 8,
+      "tempo_map": [
+        {
+          "beat": 0.0,
+          "time": 0.0,
+          "bpm": 120.0
+        }
+      ],
+      "seed": 42,
+      "groups": [
+        {
+          "id": 0,
+          "name": "stroke"
+        },
+        {
+          "id": 1,
+          "name": "orbit"
+        },
+        {
+          "id": 2,
+          "name": "ribbon"
+        },
+        {
+          "id": 3,
+          "name": "tunnel"
+        },
+        {
+          "id": 4,
+          "name": "spark"
+        },
+        {
+          "id": 5,
+          "name": "stars"
+        },
+        {
+          "id": 6,
+          "name": "rose"
+        },
+        {
+          "id": 7,
+          "name": "lissajous"
+        },
+        {
+          "id": 8,
+          "name": "hypotrochoid"
+        }
+      ],
+      "calls": [
+        {
+          "object": 0,
+          "material": "stroke",
+          "verb": "enter",
+          "beat": 0,
+          "duration": 1,
+          "from": [
+            0.2,
+            0.2,
+            0.12,
+            0.5,
+            0,
+            0.48,
+            0.4,
+            0.5,
+            0.02,
+            0,
+            1.0,
+            0.3
+          ],
+          "to": [
+            0.2,
+            0.2,
+            0.12,
+            0.5,
+            0.55,
+            0.48,
+            0.4,
+            0.5,
+            0.02,
+            0,
+            1.0,
+            0.3
+          ]
+        },
+        {
+          "object": 1,
+          "material": "orbit",
+          "verb": "enter",
+          "beat": 0,
+          "duration": 1,
+          "from": [
+            0.5,
+            0.2,
+            0.12,
+            0.5,
+            0,
+            0.505,
+            0.4,
+            0.5,
+            0.02,
+            0,
+            1.0,
+            0.3
+          ],
+          "to": [
+            0.5,
+            0.2,
+            0.12,
+            0.5,
+            0.55,
+            0.505,
+            0.4,
+            0.5,
+            0.02,
+            0,
+            1.0,
+            0.3
+          ]
+        },
+        {
+          "object": 2,
+          "material": "ribbon",
+          "verb": "enter",
+          "beat": 0,
+          "duration": 1,
+          "from": [
+            0.8,
+            0.2,
+            0.12,
+            0.5,
+            0,
+            0.53,
+            0.4,
+            0.5,
+            0.02,
+            0,
+            1.0,
+            0.3
+          ],
+          "to": [
+            0.8,
+            0.2,
+            0.12,
+            0.5,
+            0.55,
+            0.53,
+            0.4,
+            0.5,
+            0.02,
+            0,
+            1.0,
+            0.3
+          ]
+        },
+        {
+          "object": 3,
+          "material": "tunnel",
+          "verb": "enter",
+          "beat": 0,
+          "duration": 1,
+          "from": [
+            0.2,
+            0.5,
+            0.12,
+            0.5,
+            0,
+            0.5549999999999999,
+            0.4,
+            0.5,
+            0.02,
+            0,
+            1.0,
+            0.3
+          ],
+          "to": [
+            0.2,
+            0.5,
+            0.12,
+            0.5,
+            0.55,
+            0.5549999999999999,
+            0.4,
+            0.5,
+            0.02,
+            0,
+            1.0,
+            0.3
+          ]
+        },
+        {
+          "object": 4,
+          "material": "spark",
+          "verb": "enter",
+          "beat": 0,
+          "duration": 1,
+          "from": [
+            0.5,
+            0.5,
+            0.12,
+            0.5,
+            0,
+            0.58,
+            0.4,
+            0.5,
+            0.02,
+            0,
+            1.0,
+            0.3
+          ],
+          "to": [
+            0.5,
+            0.5,
+            0.12,
+            0.5,
+            0.55,
+            0.58,
+            0.4,
+            0.5,
+            0.02,
+            0,
+            1.0,
+            0.3
+          ]
+        },
+        {
+          "object": 5,
+          "material": "stars",
+          "verb": "enter",
+          "beat": 0,
+          "duration": 1,
+          "from": [
+            0.8,
+            0.5,
+            0.12,
+            0.5,
+            0,
+            0.605,
+            0.4,
+            0.5,
+            0.02,
+            0,
+            1.0,
+            0.3
+          ],
+          "to": [
+            0.8,
+            0.5,
+            0.12,
+            0.5,
+            0.55,
+            0.605,
+            0.4,
+            0.5,
+            0.02,
+            0,
+            1.0,
+            0.3
+          ]
+        },
+        {
+          "object": 6,
+          "material": "rose",
+          "verb": "enter",
+          "beat": 0,
+          "duration": 1,
+          "from": [
+            0.2,
+            0.8,
+            0.12,
+            0.5,
+            0,
+            0.63,
+            0.4,
+            0.5,
+            0.02,
+            0,
+            1.0,
+            0.3
+          ],
+          "to": [
+            0.2,
+            0.8,
+            0.12,
+            0.5,
+            0.55,
+            0.63,
+            0.4,
+            0.5,
+            0.02,
+            0,
+            1.0,
+            0.3
+          ]
+        },
+        {
+          "object": 7,
+          "material": "lissajous",
+          "verb": "enter",
+          "beat": 0,
+          "duration": 1,
+          "from": [
+            0.5,
+            0.8,
+            0.12,
+            0.5,
+            0,
+            0.655,
+            0.4,
+            0.5,
+            0.02,
+            0,
+            1.0,
+            0.3
+          ],
+          "to": [
+            0.5,
+            0.8,
+            0.12,
+            0.5,
+            0.55,
+            0.655,
+            0.4,
+            0.5,
+            0.02,
+            0,
+            1.0,
+            0.3
+          ]
+        },
+        {
+          "object": 8,
+          "material": "hypotrochoid",
+          "verb": "enter",
+          "beat": 0,
+          "duration": 1,
+          "from": [
+            0.8,
+            0.8,
+            0.12,
+            0.5,
+            0,
+            0.6799999999999999,
+            0.4,
+            0.5,
+            0.02,
+            0,
+            1.0,
+            0.3
+          ],
+          "to": [
+            0.8,
+            0.8,
+            0.12,
+            0.5,
+            0.55,
+            0.6799999999999999,
+            0.4,
+            0.5,
+            0.02,
+            0,
+            1.0,
+            0.3
+          ]
+        },
+        {
+          "object": 0,
+          "material": "stroke",
+          "verb": "rotate",
+          "beat": 2,
+          "duration": 10,
+          "from": [
+            0.2,
+            0.2,
+            0.12,
+            0.5,
+            0.55,
+            0.48,
+            0.4,
+            0.5,
+            0.02,
+            0,
+            1.0,
+            0.3
+          ],
+          "to": [
+            0.2,
+            0.2,
+            0.12,
+            0.8,
+            0.55,
+            0.48,
+            0.4,
+            0.5,
+            0.02,
+            0,
+            1.0,
+            0.3
+          ]
+        },
+        {
+          "object": 1,
+          "material": "orbit",
+          "verb": "rotate",
+          "beat": 2,
+          "duration": 10,
+          "from": [
+            0.5,
+            0.2,
+            0.12,
+            0.5,
+            0.55,
+            0.505,
+            0.4,
+            0.5,
+            0.02,
+            0,
+            1.0,
+            0.3
+          ],
+          "to": [
+            0.5,
+            0.2,
+            0.12,
+            0.8,
+            0.55,
+            0.505,
+            0.4,
+            0.5,
+            0.02,
+            0,
+            1.0,
+            0.3
+          ]
+        },
+        {
+          "object": 2,
+          "material": "ribbon",
+          "verb": "rotate",
+          "beat": 2,
+          "duration": 10,
+          "from": [
+            0.8,
+            0.2,
+            0.12,
+            0.5,
+            0.55,
+            0.53,
+            0.4,
+            0.5,
+            0.02,
+            0,
+            1.0,
+            0.3
+          ],
+          "to": [
+            0.8,
+            0.2,
+            0.12,
+            0.8,
+            0.55,
+            0.53,
+            0.4,
+            0.5,
+            0.02,
+            0,
+            1.0,
+            0.3
+          ]
+        },
+        {
+          "object": 3,
+          "material": "tunnel",
+          "verb": "rotate",
+          "beat": 2,
+          "duration": 10,
+          "from": [
+            0.2,
+            0.5,
+            0.12,
+            0.5,
+            0.55,
+            0.5549999999999999,
+            0.4,
+            0.5,
+            0.02,
+            0,
+            1.0,
+            0.3
+          ],
+          "to": [
+            0.2,
+            0.5,
+            0.12,
+            0.8,
+            0.55,
+            0.5549999999999999,
+            0.4,
+            0.5,
+            0.02,
+            0,
+            1.0,
+            0.3
+          ]
+        },
+        {
+          "object": 4,
+          "material": "spark",
+          "verb": "rotate",
+          "beat": 2,
+          "duration": 10,
+          "from": [
+            0.5,
+            0.5,
+            0.12,
+            0.5,
+            0.55,
+            0.58,
+            0.4,
+            0.5,
+            0.02,
+            0,
+            1.0,
+            0.3
+          ],
+          "to": [
+            0.5,
+            0.5,
+            0.12,
+            0.8,
+            0.55,
+            0.58,
+            0.4,
+            0.5,
+            0.02,
+            0,
+            1.0,
+            0.3
+          ]
+        },
+        {
+          "object": 5,
+          "material": "stars",
+          "verb": "rotate",
+          "beat": 2,
+          "duration": 10,
+          "from": [
+            0.8,
+            0.5,
+            0.12,
+            0.5,
+            0.55,
+            0.605,
+            0.4,
+            0.5,
+            0.02,
+            0,
+            1.0,
+            0.3
+          ],
+          "to": [
+            0.8,
+            0.5,
+            0.12,
+            0.8,
+            0.55,
+            0.605,
+            0.4,
+            0.5,
+            0.02,
+            0,
+            1.0,
+            0.3
+          ]
+        },
+        {
+          "object": 6,
+          "material": "rose",
+          "verb": "rotate",
+          "beat": 2,
+          "duration": 10,
+          "from": [
+            0.2,
+            0.8,
+            0.12,
+            0.5,
+            0.55,
+            0.63,
+            0.4,
+            0.5,
+            0.02,
+            0,
+            1.0,
+            0.3
+          ],
+          "to": [
+            0.2,
+            0.8,
+            0.12,
+            0.8,
+            0.55,
+            0.63,
+            0.4,
+            0.5,
+            0.02,
+            0,
+            1.0,
+            0.3
+          ]
+        },
+        {
+          "object": 7,
+          "material": "lissajous",
+          "verb": "rotate",
+          "beat": 2,
+          "duration": 10,
+          "from": [
+            0.5,
+            0.8,
+            0.12,
+            0.5,
+            0.55,
+            0.655,
+            0.4,
+            0.5,
+            0.02,
+            0,
+            1.0,
+            0.3
+          ],
+          "to": [
+            0.5,
+            0.8,
+            0.12,
+            0.8,
+            0.55,
+            0.655,
+            0.4,
+            0.5,
+            0.02,
+            0,
+            1.0,
+            0.3
+          ]
+        },
+        {
+          "object": 8,
+          "material": "hypotrochoid",
+          "verb": "rotate",
+          "beat": 2,
+          "duration": 10,
+          "from": [
+            0.8,
+            0.8,
+            0.12,
+            0.5,
+            0.55,
+            0.6799999999999999,
+            0.4,
+            0.5,
+            0.02,
+            0,
+            1.0,
+            0.3
+          ],
+          "to": [
+            0.8,
+            0.8,
+            0.12,
+            0.8,
+            0.55,
+            0.6799999999999999,
+            0.4,
+            0.5,
+            0.02,
+            0,
+            1.0,
+            0.3
+          ]
+        }
+      ],
+      "hits": []
+    },
+    "plan": null
+  },
+  "version": "1.0",
+  "coordinate_space": "world_normalized_2d"
+}

@@ -1,0 +1,14 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"SceneScore 1.0", "type":"object",
+  "required":["version","coordinate_space","duration","tempo_map","entities","events"],
+  "properties":{
+    "version":{"const":"1.0"},"coordinate_space":{"const":"world_normalized_2d"},
+    "duration":{"type":"number","exclusiveMinimum":0},
+    "tempo_map":{"type":"array","minItems":1,"items":{"type":"object","required":["beat","time","bpm"],"properties":{"beat":{"type":"number"},"time":{"type":"number"},"bpm":{"type":"number","exclusiveMinimum":0}}}},
+    "entities":{"type":"array","items":{"type":"object","required":["id","kind","width","height"],"properties":{"id":{"type":"integer","minimum":0},"parent_id":{"type":["integer","null"]},"kind":{"enum":["line","tap","hold","flick","drag","circle"]},"width":{"type":"number","exclusiveMinimum":0},"height":{"type":"number","exclusiveMinimum":0},"initial":{"type":"object","additionalProperties":{"type":"number"}},"source":{"type":"object"}}}},
+    "events":{"type":"array","items":{"type":"object","required":["beat","op","entity","duration","property","start","end"],"properties":{"beat":{"type":"number"},"op":{"enum":["create","transform","pulse","destroy"]},"entity":{"type":"integer","minimum":0},"duration":{"type":"number","minimum":0},"property":{"enum":["x","y","rotation","scale_x","scale_y","alpha","red","green","blue"]},"start":{"type":"number"},"end":{"type":"number"}}}},
+    "segments":{"type":"array","items":{"type":"object"}},"metadata":{"type":"object"}
+  },
+  "$comment":"Cross-reference validity, ordered time, lifecycle, tempo continuity and duration bounds are enforced by the runtime validator. Coordinates are world-space; parent_id is grouping/provenance."
+}

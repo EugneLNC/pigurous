@@ -1,0 +1,24 @@
+const fs=require('fs');
+const {chromium}=require(require.resolve('playwright',{paths:[process.env.CODEX_NODE_MODULES||'./preview/node_modules']}));
+(async()=>{
+ const browser=await chromium.launch({headless:true,channel:'msedge'}),page=await browser.newPage({viewport:{width:1440,height:1000}}),errors=[];
+ page.on('pageerror',e=>errors.push(e.message));
+ await page.goto('http://127.0.0.1:5173/');
+ await page.locator('#score-file').setInputFiles('preview/public/performance.json');
+ await page.waitForFunction(()=>document.querySelector('#entity-count').textContent==='5');
+ if(!(await page.locator('#origin').textContent()).includes('规则编排'))throw Error('Procedural provenance missing');
+ await page.locator('#timeline').fill('16');await page.locator('#timeline').dispatchEvent('input');
+ await page.screenshot({path:'artifacts/presentation/preview.png',fullPage:true});
+ const before=await page.locator('#stage canvas').screenshot();
+ await page.locator('#offset').fill('0.3');await page.locator('#offset').dispatchEvent('input');
+ if(before.equals(await page.locator('#stage canvas').screenshot()))throw Error('Layer edit had no visible effect');
+ const download=page.waitForEvent('download');await page.locator('#save').click();await(await download).saveAs('artifacts/presentation/edited.json');
+ const score=JSON.parse(fs.readFileSync('artifacts/presentation/edited.json'));if(score.entities[0].initial.x!==.3)throw Error('Layer edit not saved');
+ const records=JSON.parse(fs.readFileSync('data/prepared-mert/manifest.json'));await page.locator('#audio-file').setInputFiles(records.find(r=>r.song_id==='NWAD.Knighthood.0').audio);
+ await page.locator('#play').click();await page.waitForFunction(()=>Number(document.querySelector('#timeline').value)>16.3);await page.locator('#play').click();
+ await page.setViewportSize({width:390,height:844});if(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth))throw Error('Mobile overflow');
+ await page.setViewportSize({width:1440,height:1000});await page.locator('#export').click();await page.waitForFunction(()=>Number(document.querySelector('#timeline').value)>2);
+ const video=page.waitForEvent('download');await page.locator('#export').click();await(await video).saveAs('artifacts/presentation/browser-export.webm');
+ if(errors.length)throw Error(errors.join('\n'));
+ console.log('Presentation: load, provenance, seek, layer editing, audio playback, mobile layout, WebM passed');await browser.close();
+})().catch(e=>{console.error(e);process.exit(1);});

@@ -1,0 +1,14 @@
+const fs=require('fs'),path=require('path');
+const {chromium}=require(require.resolve('playwright',{paths:[process.env.CODEX_NODE_MODULES||'./preview/node_modules']}));
+(async()=>{const browser=await chromium.launch({headless:true,channel:'msedge'});const page=await browser.newPage({viewport:{width:1440,height:1000}});const errors=[];page.on('pageerror',e=>errors.push(e.message));
+await page.goto('http://127.0.0.1:5173/');await page.waitForFunction(()=>document.querySelector('#entity-count').textContent!=='—');await page.locator('#score-file').setInputFiles('preview/public/demo.json');await page.waitForFunction(()=>document.querySelector('#entity-count').textContent==='12');
+await page.locator('#timeline').fill('9');await page.locator('#timeline').dispatchEvent('input');
+await page.locator('#trails').check();await page.locator('#offset').fill('0.2');await page.locator('#offset').dispatchEvent('input');
+const download=page.waitForEvent('download');await page.locator('#save').click();const saved=await download;fs.mkdirSync('artifacts',{recursive:true});await saved.saveAs('artifacts/browser-edited.json');
+const score=JSON.parse(fs.readFileSync('artifacts/browser-edited.json'));if(Math.abs(score.entities[0].initial.x-.68)>1e-6)throw Error('Offset was not saved');
+await page.screenshot({path:'artifacts/preview-desktop.png',fullPage:true});
+await page.locator('#play').click();await page.waitForFunction(()=>Number(document.querySelector('#timeline').value)>9.2);await page.locator('#play').click();
+await page.setViewportSize({width:390,height:844});await page.screenshot({path:'artifacts/preview-mobile.png',fullPage:true});if(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth))throw Error('Mobile overflow');
+await page.setViewportSize({width:1440,height:1000});await page.locator('#export').click();await page.waitForFunction(()=>document.querySelector('#export').textContent==='停止并保存');
+const video=page.waitForEvent('download');await page.locator('#export').click();await(await video).saveAs('artifacts/browser-export.webm');
+if(errors.length)throw Error(errors.join('\n'));console.log('Browser playback, seek, editing, responsive layout, WebM export passed');await browser.close();})().catch(e=>{console.error(e);process.exit(1);});

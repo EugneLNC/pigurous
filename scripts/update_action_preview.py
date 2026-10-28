@@ -1,0 +1,10 @@
+from pathlib import Path
+p=Path("preview/src/performance.ts")
+s=p.read_text(encoding="utf-8")
+s=s.replace("(.08+.66*tunnel)","((strict?0:.08)+.66*tunnel)")
+s=s.replace("(.08+orbit)","((strict?0:.08)+orbit)")
+s=s.replace(".04+.96*ribbons","(strict?0:.04)+.96*ribbons")
+p.write_text(s,encoding="utf-8")
+p=Path("preview/src/main.ts"); s=p.read_text(encoding="utf-8")
+s=s.replace("performanceSurface?'音乐驱动演出 · 规则编排'", "score.metadata.origin==='learned_actions'?'模型动作编排 · 几何转译监督':performanceSurface?'音乐驱动演出 · 规则编排'")
+p.write_text(s,encoding="utf-8")

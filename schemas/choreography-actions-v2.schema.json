@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Executable Music Choreography v2",
+  "type": "object",
+  "required": ["profile", "version", "duration", "tempo_map", "groups", "calls"],
+  "properties": {
+    "profile": {"const": "choreography-v3"},
+    "version": {"const": "choreography-actions-v2"},
+    "duration": {"type": "number", "exclusiveMinimum": 0},
+    "tempo_map": {"type": "array", "minItems": 1},
+    "groups": {"type": "array", "items": {"type": "object", "required": ["id"], "properties": {"id": {"type": "integer", "minimum": 0}}}},
+    "calls": {"type": "array", "items": {"type": "object", "required": ["object", "material", "verb", "beat", "duration", "from", "to"], "properties": {
+      "object": {"type": "integer", "minimum": 0},
+      "material": {"enum": ["stroke", "orbit", "ribbon", "tunnel", "spark", "stars", "rose", "lissajous", "hypotrochoid"]},
+      "verb": {"enum": ["enter", "exit", "hold", "translate", "rotate", "scale", "draw", "morph", "split", "merge", "gather", "scatter"]},
+      "beat": {"type": "number"}, "duration": {"type": "number", "minimum": 0},
+      "curve": {"enum": ["linear", "smooth", "step"]},
+      "blend_material": {"type": "boolean"},
+      "from": {"$ref": "#/$defs/parameters"}, "to": {"$ref": "#/$defs/parameters"}
+    }}},
+    "hits": {"type": "array"}
+  },
+  "$defs": {"parameters": {"type": "array", "minItems": 12, "maxItems": 12, "items": {"type": "number", "minimum": 0, "maximum": 1}}},
+  "$comment": "Parameter order: x,y,scale,rotation,alpha,hue,shape,bend,spread,copies,reveal,depth. Tempo continuity, chronology, bounds and object references are additionally checked by both runtimes. Distinct action channels run in parallel; a later call overrides the same channel."
+}

@@ -1,0 +1,1 @@
+{"audio_dim":768,"d_model":512,"layers":8,"heads":8,"planner_dim":256,"planner_layers":4,"max_entities":128,"visual_codes":64,"dropout":0.1,"checkpointing":true}
